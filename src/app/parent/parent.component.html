@@ -1,0 +1,5 @@
+<!-- <app-child *ngFor="let hero of heroes" [hero]='hero' [master]='master'></app-child> -->
+
+<app-child (valuechange)="displaycounter($event)"></app-child>
+
+{{parentcount}}
