@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './posts/post';
 import { UserService } from './user.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { UserService } from './user.service';
 export class AppComponent {
  
   array:any=[];
-  
+  Storedposts : Post[] = [];  
+ 
   constructor(private demo:UserService){
 this.demo.userlist().subscribe((data:any)=>{
   this.array=data;
@@ -18,4 +20,10 @@ this.demo.userlist().subscribe((data:any)=>{
 })
 
   }
+
+
+  
+  onPostAdded(post: any){  
+    this.Storedposts.push(post);  
+  }  
 }

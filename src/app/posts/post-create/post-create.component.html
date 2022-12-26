@@ -9,10 +9,28 @@
 
 </div> -->
 <mat-card>  
+  <form (submit) = "onAddPost(postForm)" #postForm = "ngForm" >  
     <mat-form-field>  
-      <textarea matInput rows = "6" [(ngModel)] = "enteredValue"></textarea>  
+      <input   
+      matInput   
+      type = "text"   
+      name = "title"  
+      ngModel>    
     </mat-form-field>  
-    <button mat-raised-button color = "primary" (click) = "onAddPost()" > Save Post </button>  
+    <mat-form-field>  
+      <textarea   
+      matInput   
+      rows = "6"  
+      name = "content "   
+      ngModel>  
+</textarea>   
+    </mat-form-field>  
+    <button   
+    mat-raised-button   
+    color = "primary"   
+    type = "submit">Save Post  
+</button>     
+  </form>  
   </mat-card>  
   
   

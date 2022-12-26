@@ -28,6 +28,6 @@
 
 <app-header></app-header>  
 <main>  
-  <app-post-create></app-post-create>  
-  <app-post-list></app-post-list>  
+  <app-post-create (postCreated)= "$event"></app-post-create>   
+  <app-post-list [posts]= "Storedposts" ></app-post-list>  
 </main>  

@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { PostService } from './posts/post.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatToolbarModule,
     MatExpansionModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
